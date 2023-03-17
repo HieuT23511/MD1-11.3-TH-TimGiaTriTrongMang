@@ -7,13 +7,24 @@
 <body>
 <p id="displayPosition"></p>
 <script>
-    let value = prompt('Enter value: ');
-    let array = [1, 3, 3, 5, 7, 9, 11]
-    for (let i = 0; i < array.length; i++) {
-        if (value == array[i]) {
-            alert('value ' + array[i] + ' found at '+'[' +i +']' );
-            // document.getElementById('displayPosition').innerHTML = 'value ' + array[i] + ' found at '+'[' +i +']';
-        }
+    // let value = prompt('Enter value: ');
+    // let array = [1, 3, 3, 5, 7, 9, 11]
+    // for (let i = 0; i < array.length; i++) {
+    //     if (value == array[i]) {
+    //         // alert('value ' + array[i] + ' found at '+'[' +i +']' );
+    //         document.getElementById('displayPosition').innerHTML += 'value ' + array[i] + ' found at ' + '[' + i + ']' + '<br>';
+    //     }
+    // }
+    // Sử dụng indexOf() chi co hien thi vi tri dau tien tim thay trong mang.
+    let result = document.getElementById('displayPosition');
+    let array = [1,2,3,3,4,6,7];
+    let value = +prompt('enter the number');
+    let indexOfInput = array.indexOf(value);
+    if (indexOfInput !== -1) {
+        result.innerHTML += `${value} trùng với vị trí ${indexOfInput}`;
+    }
+    else {
+        alert(`${value} khong co trong mang`);
     }
 </script>
 </body>
